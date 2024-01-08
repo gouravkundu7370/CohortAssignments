@@ -1,6 +1,9 @@
 const mongoose = require("mongoose");
-const url = process.env.Mongo_Url;
-// Connect to MongoDB
+const dotenv = require("dotenv");
+dotenv.config();
+const url = process.env.MONGO_URI;
+//Connect to MongoDB
+
 mongoose.connect(url);
 
 // Define schemas

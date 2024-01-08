@@ -2,6 +2,7 @@ const { Router } = require("express");
 const router = Router();
 const userMiddleware = require("../middleware/user");
 const { User, Course } = require("../db");
+const { default: mongoose } = require("mongoose");
 
 // User Routes
 router.post("/signup", (req, res) => {
@@ -19,6 +20,7 @@ router.post("/signup", (req, res) => {
 
 router.get("/courses", async (req, res) => {
   // Implement listing all courses logic
+  // Implement fetching all courses logic
   const response = await Course.find({});
 
   res.json({
